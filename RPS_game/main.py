@@ -1,6 +1,7 @@
 import pygame
 import os
 
+pygame.init()
 
 WIDTH, HEIGHT= 900,500
 WIN=pygame.display.set_mode((WIDTH,HEIGHT))
@@ -8,13 +9,14 @@ pygame.display.set_caption("Rock Paper Scissors")
 
 
 def main():
-    running = True
-    while running:
+    gameRunning = True
+    while gameRunning:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
-                running = False
-            if running == False:
+                print("QUIT")
                 pygame.quit()
+                gameRunning = False
+                quit()
     
             
         
