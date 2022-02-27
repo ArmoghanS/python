@@ -1,5 +1,4 @@
 import pygame
-import os
 
 pygame.init()
 
@@ -12,7 +11,7 @@ def main():
     gameRunning = True
     while gameRunning:
         for event in pygame.event.get():
-            if event.type == pygame.QUIT:
+            if (event.type == pygame.QUIT):
                 print("QUIT")
                 pygame.quit()
                 gameRunning = False
@@ -20,7 +19,7 @@ def main():
     
             
         
-        WIN.fill(0,0,0)
+        WIN.fill((0,0,0))
         pygame.display.update()
         
     
