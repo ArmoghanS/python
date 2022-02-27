@@ -21,7 +21,7 @@ def main():
         WIN.fill(0,0,0)
         pygame.display.update()
         
-    pygame.quit()
+    
     
     if __name__=="__main__":
         main()
