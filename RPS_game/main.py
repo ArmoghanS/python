@@ -95,18 +95,19 @@ def bg_update():
         pygame.quit()
         quit()
     if start_btn.draw():
-        if player is not None:
+        if player.isalpha():
             if play(player,computer):
                 print("You've won")
     pygame.display.update()   
             
 def play(player,opponent):
+    
+    if (player== 'r' and opponent=='s') or(player=='s' and opponent=='p') or (player=='p'and opponent=='r'):
+        return True        
     if player==opponent:
         print("Tie")
         pygame.quit()
         quit()
-    if (player== 'r' and opponent=='s') or(player=='s' and opponent=='p') or (player=='p'and opponent=='r'):
-        return True        
 
         
     
