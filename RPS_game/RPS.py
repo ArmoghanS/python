@@ -1,4 +1,5 @@
 import random
+from re import S
 
 def play():
     user=input(" Choose your weapon: 'r' for rock, 'p' for paper, 's' for scissors: ").lower()
