@@ -81,6 +81,7 @@ def game():
 
 #Drawing thigns onto screen
 def bg_update():
+    global player
     WIN.blit(bg_img,(0,0)) #Draws Background
     if rock.draw():
         print("You've Chosen Rock")
@@ -95,9 +96,8 @@ def bg_update():
         pygame.quit()
         quit()
     if start_btn.draw():
-        if player.isalpha():
-            if play(player,computer):
-                print("You've won")
+        if play(player,computer):
+            print("You've won")
     pygame.display.update()   
             
 def play(player,opponent):
