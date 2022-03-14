@@ -98,6 +98,10 @@ def bg_update():
     if start_btn.draw():
         if play(player,computer):
             print("You've won")
+            
+        if play(player,computer)==False:
+            print("You Lose")
+            
     pygame.display.update()   
             
 def play(player,opponent):
@@ -108,6 +112,8 @@ def play(player,opponent):
         print("Tie")
         pygame.quit()
         quit()
+    if (opponent== 'r' and player=='s') or(opponent=='s' and player=='p') or (opponent=='p'and player=='r'):
+        return False
 
         
     
